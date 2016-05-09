@@ -228,6 +228,8 @@ foreach ($battleLogs as $fname) {
 	echo '<a href="index.php?action=replay&fname='.$fname.'">'.$fname.'</a><br>';
 }
 ?>
+<br>
+<A href="SimpleBattle.php">Simple Battle</a>
 
 <!-- jq to clone -->
 <div id="memberContainer" style="display: none;">

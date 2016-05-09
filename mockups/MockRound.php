@@ -7,7 +7,7 @@
  */
 class MockRound
 {
-	public $memberOrder;
+	public $order;
 	
 	/** @var MockTurn[] */
 	public $turns;

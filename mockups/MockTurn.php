@@ -15,8 +15,11 @@ class MockTurn
 	public $attackerEnd;
 
 	public $defenderStart;
+
+	/** @var  MockOriginalMember */
 	public $defenderEnd;
 
+	/** @var  MockOriginalMember[] */
 	public $membersStart;
 
 }

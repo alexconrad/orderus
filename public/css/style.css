@@ -1,0 +1,249 @@
+.teamContainer {
+	display: block;
+	vertical-align: top;
+}
+.mTeam {
+	border: 1px solid #c0c0c0;
+	display: inline-block;
+	padding: 5px;
+	margin-right: 2px;
+	vertical-align: top;
+}
+
+.mTeamName {
+	border-bottom: 1px solid black;
+}
+
+.mMember {
+	display: inline-block;
+	height: 225px;
+}
+
+.mMemberName {
+	border-left: 1px solid black;
+	padding: 2px;
+}
+
+.mStatList {
+	list-style: none;
+	padding-left: 10px;
+}
+.mStatName {
+	padding-right: 10px;
+	text-align: right;
+}
+.mStatAmount {
+	float: right;
+	padding-right: 10px;
+}
+
+.mSkillContainer {
+	border-top: 1px dashed #c0c0c0;
+}
+.mSkillList {
+	list-style: none;
+	padding-left: 1px;
+}
+.mSkillName {
+	padding-right: 10px;
+	text-align: right;
+}
+.mSkillAmount {
+	float: right;
+	padding-right: 10px;
+}
+
+.RoundDataContainer {
+	display: inline-block;
+	width: 1000px;
+	max-width:1000px;
+	border: 3px dashed #c0c0c0;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.RoundText {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+	vertical-align: top;
+	width: 968px;
+}
+
+
+.TurnDataContainer {
+	float: left;
+	display: inline-block;
+	width: 500px;
+}
+
+.TurnStartContainer {
+	border: 1px dashed #c0c0c0;
+	display: inline-block;
+	padding: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+	float: inherit;
+	vertical-align: middle;
+	width: 500px;
+}
+
+.TurnStartContainer .TurnStartText {
+	display: inline-block;
+}
+
+.TurnStartContainer .AttackerContainer {
+	display: inline-block;
+	float: left;
+}
+.TurnStartContainer .DefenderContainer {
+	display: inline-block;
+	float: right;
+}
+
+.TurnStartContainer .AttackingMemberName {
+	display: block;
+}
+.TurnStartContainer .AttackingMemberHealth {
+}
+
+.TurnStartContainer .DefenderMemberName {
+	display: block;
+}
+.TurnStartContainer .DefenderMemberHealth {
+}
+
+.TurnText {
+	display: inline-block;
+	padding: 15px;
+	margin-bottom: 5px;
+	text-align: left;
+	float: inherit;
+	vertical-align: top;
+	width: 500px;
+}
+.TurnEndContainer {
+	border: 1px dashed #c0c0c0;
+	display: inline-block;
+	padding: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+	float: inherit;
+	vertical-align: middle;
+	width: 500px;
+}
+
+.TurnEndContainer .TurnStartText {
+	display: inline-block;
+}
+
+.TurnEndContainer .AttackerContainer {
+	display: inline-block;
+	float: left;
+}
+.TurnEndContainer .DefenderContainer {
+	display: inline-block;
+	float: right;
+}
+
+.TurnEndContainer .AttackingMemberName {
+	display: block;
+}
+.TurnEndContainer .AttackingMemberHealth {
+}
+
+.TurnEndContainer .DefenderMemberName {
+	display: block;
+}
+.TurnEndContainer .DefenderMemberHealth {
+}
+
+.LeftContainer {
+	float: right;
+}
+
+.RoundOrder {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 15px;
+	margin-bottom: 5px;
+	text-align: right;
+	vertical-align: top;
+	height: 500px;
+}
+
+ul.RoundOrderList {
+	list-style: none;
+}
+
+
+li.RoundOrderTitle {
+	border-bottom: 1px dotted black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+li.RoundOrderAttack {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+li.RoundOrderAttack:before {
+	 content: "\226B";
+ }
+
+li.RoundOrderMemberDead {
+}
+
+li.RoundOrderMemberDead:before {
+	content: "\226B";
+}
+.TurnTeams {
+ display: inline-block;
+}
+.TurnTeamContainer {
+	border: 1px solid black;
+	display: block;
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: right;
+}
+.TurnTeamList {
+	list-style: none;
+	padding-left: 1px;
+}
+
+.TurnTeamListTitle {
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px dotted black;
+}
+.TurnTeamListDefender {
+	font-size: 14px;
+	font-weight: bold;
+}
+.TurnTeamListDefender:before {
+	content : "\2717  ";
+	position: relative;
+	top: -4px;
+}
+.TurnTeamListDead {
+	color: #c0c0c0;
+}
+.TurnTeamListDead:before {
+	content: "\1F480  ";
+	position: relative;
+	top: -4px;
+}
+.TurnTeamListAttacker {
+	font-size: 14px;
+	font-weight: bold;
+}
+.TurnTeamListAttacker:before {
+	content: "\2694  ";
+	position: relative;
+	top: -4px;
+}

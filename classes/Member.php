@@ -95,7 +95,15 @@ class Member
 		return array_pop($aPool);
 		
 	}
-	
+
+    /**
+     *
+     * @param Member $oMemberDefender
+     * @param $aAllMembers
+     * @param bool $bAttackerUsesSkills
+     * @param bool $bDefenderUsesSkills
+     * @param bool $bDefenderCanGetLucky
+     */
 	public function attack(\Member $oMemberDefender, $aAllMembers, $bAttackerUsesSkills = TRUE, $bDefenderUsesSkills = TRUE, $bDefenderCanGetLucky = TRUE)
 	{
 
@@ -118,9 +126,10 @@ class Member
 			}
 		}
 		
-		//echo $this->getMemberName()." skills : ".implode(",", $aAttackerExecutesSkills)."<br>";
 
 		$nDamage = $this->getStat(Stats\Strength::class)->getAmount() - $oMemberDefender->getStat(Stats\Defence::class)->getAmount();
+        //negative damage can be prevented here
+
 		if ($bDefenderCanGetLucky && $oMemberDefender->isLucky()) {
 			BattleLog::addTurnText($oMemberDefender->getMemberName()." is lucky !");
 			//echo $oMemberDefender->getMemberName()." is lucky !<br>";
@@ -129,10 +138,12 @@ class Member
 		$oMemberDefender->getModifier()->addDamage($nDamage);
 
 		foreach ($aAttackerExecutesSkills as $sAttackerSkillClass) {
+            /** @see \Skills\Attack\RapidStrike::execute()*/
 			$this->aSkills[$sAttackerSkillClass]->execute($this, $oMemberDefender, $aAllMembers, 0, $nDamage);
 		}
 
 		foreach ($aDefenderExecutesSkills as $sDefenderSkillClass) {
+            /** @see \Skills\Defence\MagicShield::execute()*/
 			$oMemberDefender->getSkill($sDefenderSkillClass)->execute($oMemberDefender, $this, $aAllMembers, $nDamage, 0);
 		}
 

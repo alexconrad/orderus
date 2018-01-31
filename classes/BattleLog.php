@@ -1,5 +1,12 @@
 <?php
 
+/**
+ *
+ * Used to save data about a battle for replays.
+ * Can also be used for debuging if something went wrong.
+ *
+ * Class BattleLog
+ */
 class BattleLog
 {
 	private static $instance;
@@ -67,7 +74,9 @@ class BattleLog
 			$sKey             = array_pop($aParts);
 			$o->skills->$sKey = $oSkill->getChance();
 		}
-		return $o;
+
+		/** @noinspection PhpIncompatibleReturnTypeInspection */
+        return $o;
 	}
 
 	public static function addText($text) {

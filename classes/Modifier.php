@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Modifier keeps the things to change to the member after Turn has ended.
+ * Resets at the start of a turn.
+ *
+ * Class Modifier
+ */
 class Modifier
 {
 	protected $nDamage = 0;

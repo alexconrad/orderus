@@ -76,7 +76,7 @@ class Round
 			$sMemberIndex = array_shift($this->aMemberOrder);
 
 		}
-
+        /** @see \Control::actionBattle() used here to get next attacker and to determine if round ended  */
 		return FALSE;
 	}
 

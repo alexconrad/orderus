@@ -52,6 +52,9 @@ class Control
 		$this->oView->display('battle');
 	}
 
+    /**
+     * @throws Exception
+     */
 	public function actionBattle()
 	{
 		$post = $_POST['members'];
@@ -133,16 +136,26 @@ class Control
 				}
 				
 				BattleLog::newTurn($oBattle->getMembers()[$sAttackingMemberIndex], $oBattle->getMembers());
-				$oTurn = new Turn($sAttackingMemberIndex, $oBattle->getMembers());
+
+                /** @see Member::chooseOpponent Opponent is chosen here. */
+                $oTurn = new Turn($sAttackingMemberIndex, $oBattle->getMembers());
+
 				BattleLog::turnDefender($oBattle->getMembers()[$oTurn->getDefenderMemberIndex()]);
 
+                //reset modifiers (damage)
 				$oTurn->startTurn();
+
+                //perform attack, use skills, calculate damage
 				$oTurn->attack();
+
+                //end turn (apply damage to hero/beast member object)
 				$oTurn->endTurn();
+
 				BattleLog::turnEnd($oBattle->getMembers()[$sAttackingMemberIndex], $oBattle->getMembers()[$oTurn->getDefenderMemberIndex()]);
 				
 				$oBattle->increaseNumberOfTurnsCompleted();
 
+                /** @see Round::getNextAttackingMember() returns false if none left to attack */
 			} while (($sAttackingMemberIndex = $oRound->getNextAttackingMember()) && ($oBattle->ended() === FALSE));
 
 		}

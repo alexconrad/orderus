@@ -201,7 +201,7 @@
 
 <pre>
 - The battle can take place between 1 or more teams.
-- One Team can have 1 or more Heroes and/or WildBeast.
+- One Team can have 2 or more Heroes and/or WildBeast.
 - To make members be in the same team, change their team name to be the same.
 - You can enable Skills on Beasts.
 - By default, the Stats and Skills are set to the ones given in the test.

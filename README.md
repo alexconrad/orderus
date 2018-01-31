@@ -1,6 +1,6 @@
 Files in mockups/* serve no purpose but to faciliate IDE autocomplete
 
-- The battle can take place between 1 or more teams.
+- The battle can take place between 2 or more teams.
 - One Team can have 1 or more Heroes and/or WildBeast.
 - To make members be in the same team, change their team name to be the same.
 - You can enable Skills on Beasts.

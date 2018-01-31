@@ -206,6 +206,7 @@
 - You can enable Skills on Beasts.
 - By default, the Stats and Skills are set to the ones given in the test.
 - Rapid Strike is considered a double attack, meaning defender rolls luck and/or skills for every attack.
+- Damage = Attacker strength – Defender defense. Negative damage (life giving) is possible for low attack vs high defence.
 - Once added, the stats of a Hero/Beast can be changed. Random between A and B should be typed as "A..B". Fixed numbers are fine too.
 - You can replay past battles.
 </pre>
@@ -218,7 +219,9 @@
 
 <div id="members"></div>
 
-Max.Turns:<input type="text" name="maxRounds" value="20"> &nbsp; <input type="submit" name="submit" value="Battle">
+Max.Turns:<label>
+        <input type="text" name="maxRounds" value="20">
+    </label> &nbsp; <input type="submit" name="submit" value="Battle">
 </form>
 
 <br>

@@ -75,6 +75,10 @@ class Control
 				$sStatName = preg_replace('/[^a-zA-Z0-9]/', '', $sStatName);
 				$sClassName = "\\Stats\\$sStatName";
 
+                if (($sStatName == 'Health') && (($min == 0) || ($max == 0))) {
+                    throw new \Exception("Undead cannot fight. Health greater than zero please.");
+                }
+
 				/** @var \Stats\Base $oStat */
 				$oStat = new $sClassName();
 				$oStat->randomize((int)$min, (int)$max);

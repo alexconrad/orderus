@@ -19,8 +19,8 @@ class Member
 	
 	public function __construct($sName, $sTeam)
 	{
-		$this->sName = $sName;
-		$this->sTeam = $sTeam;
+		$this->sName = preg_replace('/[^a-zA-Z0-9]/', '', $sName);
+		$this->sTeam = preg_replace('/[^a-zA-Z0-9]/', '', $sTeam);
 
 		return $this;
 	}
